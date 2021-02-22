@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "images",
+  "info": {
+    "name": "images"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "PassionFroid",
+        "fournisseur",
+        "logo",
+        "ambiance",
+        "produit"
+      ]
+    },
+    "avec_produit": {
+      "type": "boolean"
+    },
+    "avec_humain": {
+      "type": "boolean"
+    },
+    "institutionnelle": {
+      "type": "boolean"
+    },
+    "format_image": {
+      "type": "enumeration",
+      "enum": [
+        "vertical",
+        "horizontal"
+      ]
+    },
+    "credits": {
+      "type": "string"
+    },
+    "droits_limites": {
+      "type": "boolean"
+    },
+    "copryright": {
+      "type": "string"
+    },
+    "fin_droits": {
+      "type": "date"
+    }
+  }
+}
