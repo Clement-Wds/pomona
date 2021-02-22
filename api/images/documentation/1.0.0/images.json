@@ -564,6 +564,31 @@
             "type": "string",
             "format": "date"
           },
+          "image_id": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "tag": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -613,6 +638,9 @@
           "fin_droits": {
             "type": "string",
             "format": "date"
+          },
+          "image_id": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

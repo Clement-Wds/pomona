@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "images_to_tags",
+  "info": {
+    "name": "Images-to-Tags"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "image": {
+      "model": "images",
+      "via": "image_id"
+    },
+    "tag": {
+      "model": "tags",
+      "via": "tag_id"
+    }
+  }
+}

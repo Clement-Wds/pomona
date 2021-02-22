@@ -12,6 +12,10 @@
   "attributes": {
     "tag": {
       "type": "string"
+    },
+    "tag_id": {
+      "via": "tag",
+      "model": "images-to-tags"
     }
   }
 }

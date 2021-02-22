@@ -1,18 +1,19 @@
 {
   "paths": {
-    "/tags": {
+    "/images-to-tags": {
       "get": {
         "deprecated": false,
-        "description": "Find all the tags's records",
+        "description": "Find all the images-to-tags's records",
         "responses": {
           "200": {
-            "description": "Retrieve tags document(s)",
+            "description": "Retrieve images-to-tags document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Tags"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Tags"
+          "Images-to-tags"
         ],
         "parameters": [
           {
@@ -194,79 +195,16 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new tags record",
+        "description": "Create a new images-to-tags record",
         "responses": {
           "200": {
-            "description": "Retrieve tags document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Tags"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Tags"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewTags"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/tags/count": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve the numver of tags documents",
-        "responses": {
-          "200": {
-            "description": "Retrieve tags document(s)",
+            "description": "Retrieve images-to-tags document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,22 +244,36 @@
         },
         "summary": "",
         "tags": [
-          "Tags"
+          "Images-to-tags"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewImages-to-tags"
+              }
+            }
+          }
+        }
       }
     },
-    "/tags/{id}": {
+    "/images-to-tags/count": {
       "get": {
         "deprecated": false,
-        "description": "Find one tags record",
+        "description": "Retrieve the numver of images-to-tags documents",
         "responses": {
           "200": {
-            "description": "Retrieve tags document(s)",
+            "description": "Retrieve images-to-tags document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tags"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Tags"
+          "Images-to-tags"
+        ],
+        "parameters": []
+      }
+    },
+    "/images-to-tags/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "Find one images-to-tags record",
+        "responses": {
+          "200": {
+            "description": "Retrieve images-to-tags document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Images-to-tags"
         ],
         "parameters": [
           {
@@ -376,14 +385,18 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single tags record",
+        "description": "Update a single images-to-tags record",
         "responses": {
           "200": {
-            "description": "Retrieve tags document(s)",
+            "description": "Retrieve images-to-tags document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tags"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Tags"
+          "Images-to-tags"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTags"
+                "$ref": "#/components/schemas/NewImages-to-tags"
               }
             }
           }
@@ -449,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single tags record",
+        "description": "Delete a single images-to-tags record",
         "responses": {
           "200": {
-            "description": "deletes a single tags based on the ID supplied",
+            "description": "deletes a single images-to-tags based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Tags"
+          "Images-to-tags"
         ],
         "parameters": [
           {
@@ -514,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Tags": {
+      "Images-to-tags": {
         "required": [
           "id"
         ],
@@ -522,10 +535,7 @@
           "id": {
             "type": "string"
           },
-          "tag": {
-            "type": "string"
-          },
-          "tag_id": {
+          "image": {
             "required": [
               "id"
             ],
@@ -533,10 +543,73 @@
               "id": {
                 "type": "string"
               },
-              "image": {
+              "nom": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "PassionFroid",
+                  "fournisseur",
+                  "logo",
+                  "ambiance",
+                  "produit"
+                ]
+              },
+              "avec_produit": {
+                "type": "boolean"
+              },
+              "avec_humain": {
+                "type": "boolean"
+              },
+              "institutionnelle": {
+                "type": "boolean"
+              },
+              "format_image": {
+                "type": "string",
+                "enum": [
+                  "vertical",
+                  "horizontal"
+                ]
+              },
+              "credits": {
+                "type": "string"
+              },
+              "droits_limites": {
+                "type": "boolean"
+              },
+              "copryright": {
+                "type": "string"
+              },
+              "fin_droits": {
+                "type": "string"
+              },
+              "image_id": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "tag": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
                 "type": "string"
               },
               "tag": {
+                "type": "string"
+              },
+              "tag_id": {
                 "type": "string"
               },
               "published_at": {
@@ -556,12 +629,12 @@
           }
         }
       },
-      "NewTags": {
+      "NewImages-to-tags": {
         "properties": {
-          "tag": {
+          "image": {
             "type": "string"
           },
-          "tag_id": {
+          "tag": {
             "type": "string"
           },
           "published_at": {
@@ -578,9 +651,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Tags"
-    }
-  ]
+  "tags": []
 }
