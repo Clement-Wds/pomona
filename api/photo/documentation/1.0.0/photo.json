@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/home": {
+    "/photo": {
       "get": {
         "deprecated": false,
-        "description": "Find all the home's records",
+        "description": "Find all the photo's records",
         "responses": {
           "200": {
-            "description": "Retrieve home document(s)",
+            "description": "Retrieve photo document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Home"
+                    "$ref": "#/components/schemas/Photo"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Home"
+          "Photo"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single home record",
+        "description": "Update a single photo record",
         "responses": {
           "200": {
-            "description": "Retrieve home document(s)",
+            "description": "Retrieve photo document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Home"
+                  "$ref": "#/components/schemas/Photo"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Home"
+          "Photo"
         ],
         "requestBody": {
           "description": "",
@@ -247,7 +247,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewHome"
+                "$ref": "#/components/schemas/NewPhoto"
               }
             }
           }
@@ -256,10 +256,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single home record",
+        "description": "Delete a single photo record",
         "responses": {
           "200": {
-            "description": "deletes a single home based on the ID supplied",
+            "description": "deletes a single photo based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -302,7 +302,7 @@
         },
         "summary": "",
         "tags": [
-          "Home"
+          "Photo"
         ],
         "parameters": []
       }
@@ -310,7 +310,7 @@
   },
   "components": {
     "schemas": {
-      "Home": {
+      "Photo": {
         "required": [
           "id"
         ],
@@ -318,10 +318,7 @@
           "id": {
             "type": "string"
           },
-          "text": {
-            "type": "string"
-          },
-          "image": {
+          "photo": {
             "type": "array",
             "items": {
               "required": [
@@ -397,11 +394,8 @@
           }
         }
       },
-      "NewHome": {
+      "NewPhoto": {
         "properties": {
-          "text": {
-            "type": "string"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -418,7 +412,7 @@
   },
   "tags": [
     {
-      "name": "Home"
+      "name": "Photo"
     }
   ]
 }

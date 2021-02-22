@@ -1,8 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "homes",
+  "collectionName": "photos",
   "info": {
-    "name": "Home"
+    "name": "Photo"
   },
   "options": {
     "increments": true,
@@ -10,10 +10,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "text": {
-      "type": "richtext"
-    },
-    "image": {
+    "photo": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [

@@ -2,24 +2,24 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/home",
-      "handler": "home.find",
+      "path": "/photo",
+      "handler": "photo.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/home",
-      "handler": "home.update",
+      "path": "/photo",
+      "handler": "photo.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/home",
-      "handler": "home.delete",
+      "path": "/photo",
+      "handler": "photo.delete",
       "config": {
         "policies": []
       }
