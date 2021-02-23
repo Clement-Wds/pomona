@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "images_to_tags",
   "info": {
-    "name": "Images-to-Tags"
+    "name": "Images-to-Tags",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -11,12 +12,14 @@
   },
   "attributes": {
     "image": {
-      "model": "images",
-      "via": "image_id"
+      "collection": "images",
+      "via": "image_id",
+      "dominant": true
     },
     "tag": {
-      "model": "tags",
-      "via": "tag_id"
+      "collection": "tags",
+      "via": "tag_id",
+      "dominant": true
     }
   }
 }

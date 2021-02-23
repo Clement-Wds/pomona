@@ -53,7 +53,7 @@
     },
     "image_id": {
       "via": "image",
-      "model": "images-to-tags"
+      "collection": "images-to-tags"
     }
   }
 }

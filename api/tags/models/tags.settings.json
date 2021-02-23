@@ -15,7 +15,7 @@
     },
     "tag_id": {
       "via": "tag",
-      "model": "images-to-tags"
+      "collection": "images-to-tags"
     }
   }
 }

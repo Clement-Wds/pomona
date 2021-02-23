@@ -536,90 +536,102 @@
             "type": "string"
           },
           "image": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nom": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string",
-                "enum": [
-                  "PassionFroid",
-                  "fournisseur",
-                  "logo",
-                  "ambiance",
-                  "produit"
-                ]
-              },
-              "avec_produit": {
-                "type": "boolean"
-              },
-              "avec_humain": {
-                "type": "boolean"
-              },
-              "institutionnelle": {
-                "type": "boolean"
-              },
-              "format_image": {
-                "type": "string",
-                "enum": [
-                  "vertical",
-                  "horizontal"
-                ]
-              },
-              "credits": {
-                "type": "string"
-              },
-              "droits_limites": {
-                "type": "boolean"
-              },
-              "copryright": {
-                "type": "string"
-              },
-              "fin_droits": {
-                "type": "string"
-              },
-              "image_id": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nom": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "PassionFroid",
+                    "fournisseur",
+                    "logo",
+                    "ambiance",
+                    "produit"
+                  ]
+                },
+                "avec_produit": {
+                  "type": "boolean"
+                },
+                "avec_humain": {
+                  "type": "boolean"
+                },
+                "institutionnelle": {
+                  "type": "boolean"
+                },
+                "format_image": {
+                  "type": "string",
+                  "enum": [
+                    "vertical",
+                    "horizontal"
+                  ]
+                },
+                "credits": {
+                  "type": "string"
+                },
+                "droits_limites": {
+                  "type": "boolean"
+                },
+                "copryright": {
+                  "type": "string"
+                },
+                "fin_droits": {
+                  "type": "string"
+                },
+                "image_id": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
           "tag": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "tag": {
-                "type": "string"
-              },
-              "tag_id": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "tag": {
+                  "type": "string"
+                },
+                "tag_id": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -632,10 +644,16 @@
       "NewImages-to-tags": {
         "properties": {
           "image": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "tag": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/23/2021 12:19:28 AM"
+    "x-generation-date": "02/23/2021 11:20:30 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4008,90 +4008,102 @@
             "type": "string"
           },
           "image": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nom": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string",
-                "enum": [
-                  "PassionFroid",
-                  "fournisseur",
-                  "logo",
-                  "ambiance",
-                  "produit"
-                ]
-              },
-              "avec_produit": {
-                "type": "boolean"
-              },
-              "avec_humain": {
-                "type": "boolean"
-              },
-              "institutionnelle": {
-                "type": "boolean"
-              },
-              "format_image": {
-                "type": "string",
-                "enum": [
-                  "vertical",
-                  "horizontal"
-                ]
-              },
-              "credits": {
-                "type": "string"
-              },
-              "droits_limites": {
-                "type": "boolean"
-              },
-              "copryright": {
-                "type": "string"
-              },
-              "fin_droits": {
-                "type": "string"
-              },
-              "image_id": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nom": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "PassionFroid",
+                    "fournisseur",
+                    "logo",
+                    "ambiance",
+                    "produit"
+                  ]
+                },
+                "avec_produit": {
+                  "type": "boolean"
+                },
+                "avec_humain": {
+                  "type": "boolean"
+                },
+                "institutionnelle": {
+                  "type": "boolean"
+                },
+                "format_image": {
+                  "type": "string",
+                  "enum": [
+                    "vertical",
+                    "horizontal"
+                  ]
+                },
+                "credits": {
+                  "type": "string"
+                },
+                "droits_limites": {
+                  "type": "boolean"
+                },
+                "copryright": {
+                  "type": "string"
+                },
+                "fin_droits": {
+                  "type": "string"
+                },
+                "image_id": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
           "tag": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "tag": {
-                "type": "string"
-              },
-              "tag_id": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "tag": {
+                  "type": "string"
+                },
+                "tag_id": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -4104,10 +4116,16 @@
       "NewImages-to-tags": {
         "properties": {
           "image": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "tag": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
@@ -4172,27 +4190,36 @@
             "format": "date"
           },
           "image_id": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "image": {
-                "type": "string"
-              },
-              "tag": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tag": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -4247,7 +4274,10 @@
             "format": "date"
           },
           "image_id": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
@@ -4371,27 +4401,36 @@
             "type": "string"
           },
           "tag_id": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "image": {
-                "type": "string"
-              },
-              "tag": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "tag": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -4407,7 +4446,10 @@
             "type": "string"
           },
           "tag_id": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
