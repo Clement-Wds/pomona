@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "images",
   "info": {
-    "name": "images"
+    "name": "images",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -52,8 +53,11 @@
       "type": "date"
     },
     "image_id": {
-      "via": "image",
-      "collection": "images-to-tags"
+      "collection": "images-to-tags",
+      "via": "image"
+    },
+    "url": {
+      "type": "string"
     }
   }
 }

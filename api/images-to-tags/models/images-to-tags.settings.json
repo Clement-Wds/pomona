@@ -12,8 +12,8 @@
   },
   "attributes": {
     "image": {
-      "collection": "images",
       "via": "image_id",
+      "collection": "images",
       "dominant": true
     },
     "tag": {
